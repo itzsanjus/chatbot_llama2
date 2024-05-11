@@ -2,9 +2,9 @@
 
 
 ***The objective of the project is to develop a Question-Answering (QnA) system capable of extracting information from PDF files using LLaMA 2 (Language Learning for Machine-Assisted Modeling). This system aims to provide accurate answers to questions based on the context found within the PDF documents, enabling efficient information retrieval from textual resources.***
-
-Requirements -
 ***
+Requirements -
+
 * PyPDF: Extract text and metadata from PDF documents.
 * Langchain: Implement natural language processing pipelines for multilingual text.
 * Accelerate: Utilize GPU acceleration for faster numerical computations.
