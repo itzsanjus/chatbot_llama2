@@ -7,14 +7,15 @@ import chainlit as cl
 
 DB_FAISS_PATH = 'vectorstores/db_faiss'
 
-custom_prompt_template = """Use the following pieces of information to answer the user's question.
-If you don't know the answer, just say that you don't know, don't try to make up an answer.
+custom_prompt_template = """
+Use the following context of information to answer the question.
 
 Context: {context}
 Question: {question}
 
-Only return the helpful answer below and nothing else.
-Helpful answer:
+
+The answer is : 
+
 """
 
 def set_custom_prompt():
@@ -67,9 +68,9 @@ def final_result(query):
 @cl.on_chat_start
 async def start():
     chain = qa_bot()
-    msg = cl.Message(content="Starting the bot...")
+    msg = cl.Message(content="Please wait. Things are getting ready for you....")
     await msg.send()
-    msg.content = "Hi, Welcome to ChatBot. What is your query?"
+    msg.content = "Hi, Welcome!. What is your query?"
     await msg.update()
 
     cl.user_session.set("chain", chain)
@@ -86,8 +87,14 @@ async def main(message: cl.Message):
     sources = res["source_documents"]
 
     if sources:
+        print('\n')
         answer += f"\nSources:" + str(sources)
     else:
+        print('\n')
         answer += "\nNo sources found"
 
     await cl.Message(content=answer).send()
+
+@cl.on_chat_end
+def end():
+    print("goodbye", cl.user_session.get("id"))

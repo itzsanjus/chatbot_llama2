@@ -1,4 +1,20 @@
-# Chatbot using Llama2
+# A QnA system for any PDF files using LLaMA 2
+
+
+***The objective of the project is to develop a Question-Answering (QnA) system capable of extracting information from PDF files using LLaMA 2 (Language Learning for Machine-Assisted Modeling). This system aims to provide accurate answers to questions based on the context found within the PDF documents, enabling efficient information retrieval from textual resources.***
+
+Requirements -
+***
+* PyPDF: Extract text and metadata from PDF documents.
+* Langchain: Implement natural language processing pipelines for multilingual text.
+* Accelerate: Utilize GPU acceleration for faster numerical computations.
+* Bitsandbytes: For qunatization of the model.
+* Transformers: Perform state-of-the-art natural language processing tasks.
+* CTransformers: Utilize transformer-based models for machine translation tasks.
+* Sentence Transformers: Generate dense vector representations for sentences and paragraphs.
+* Faiss_cpu: Perform efficient similarity search and clustering on large-scale datasets.
+* Chainlit: Build the UI.
+***
 
 ## Installation
 
