@@ -56,7 +56,7 @@ To get started with the Llama2 ChatBot, you need to:
 
 ## Usage
 
-The Llama2 Chat Bot can be used for answering medical-related queries. To use the bot, you can follow these steps:
+The Llama2 Chat Bot can be used for answering queries from uploaded PDF. To use the bot, you can follow these steps:
 
 1. Start the bot by running the application or using the provided Python script.
 
